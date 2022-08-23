@@ -8,21 +8,21 @@ const scontoSenior = 0.6;
 let costoBiglietto, prezzoFinale = distanzaDaPercorrere * prezzo;
 
 if (etaPasseggero < 18) {
-    let prezzoFinale = costoBiglietto * scontoMinori;
+    prezzoFinale = costoBiglietto * scontoMinori;
 }
 
 else {
 
     if (etaPasseggero > 65) {
-        let prezzoFinale = costoBiglietto * scontoSenior;
+        prezzoFinale = costoBiglietto * scontoSenior;
     }
 
 }
 
-const risposta = `Il prezzo del biglietto è $(prezzoFinale)`;
+//const risposta = `Il prezzo del biglietto è $(prezzoFinale)`;
 
-document.getElementById('prezzoAcquisto').innerHTML = risposta;
+document.getElementById('prezzoAcquisto').innerHTML = `Il prezzo del biglietto è $(prezzoFinale) `;
 
-/*
-document.writeln('Il prezzo del tuo biglietto è');
-document.writeln(prezzoFinale);*/
+
+//document.writeln('Il prezzo del tuo biglietto è');
+//document.writeln(prezzoFinale);
