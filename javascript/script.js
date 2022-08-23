@@ -5,7 +5,8 @@ const prezzo = 0.21;
 const scontoMinori = 0.8;
 const scontoSenior = 0.6;
 
-let costoBiglietto, prezzoFinale = distanzaDaPercorrere * prezzo;
+let costoBiglietto = distanzaDaPercorrere * prezzo;
+let prezzoFinale = distanzaDaPercorrere * prezzo;
 
 if (etaPasseggero < 18) {
     console.log('sconto minori', scontoMinori);
