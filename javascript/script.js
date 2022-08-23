@@ -1,5 +1,5 @@
-let distanzaDaPercorrere = prompt('Quanti chilometri da percorrere?');
-let etaPasseggero = prompt('Età del passeggero?');
+let distanzaDaPercorrere = parseInt(prompt('Quanti chilometri da percorrere?'));
+let etaPasseggero = parseInt(prompt('Età del passeggero?'));
 
 const prezzo = 0.21;
 const scontoMinori = 0.8;
@@ -12,7 +12,7 @@ if ((isNaN(distanzaDaPercorrere)) || (isNaN(etaPasseggero))) {
     document.getElementById('prezzoAcquisto').innerHTML = `Dati inseriti non validi`;
 }
 else {
-    if ((distanzaDaPercorrere === 0) || (etaPasseggero === 0)) {
+    if (distanzaDaPercorrere === 0) {
         console.log('ciao visualizza', scontoMinori);
         document.getElementById('prezzoAcquisto').innerHTML = `Dati mancanti`;
     }
