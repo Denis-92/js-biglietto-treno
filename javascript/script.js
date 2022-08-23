@@ -25,7 +25,7 @@ else {
 //const risposta = `Il prezzo del biglietto è $(prezzoFinale)`;
 console.log('prezzo finale prima del output', prezzoFinale);
 
-document.getElementById('prezzoAcquisto').innerHTML = prezzoFinale;
+document.getElementById('prezzoAcquisto').innerHTML = `Il prezzo del tuo biglietto è ${prezzoFinale}`;
 
 
 //document.writeln('Il prezzo del tuo biglietto è');
