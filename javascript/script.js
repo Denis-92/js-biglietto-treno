@@ -19,7 +19,10 @@ else {
 
 }
 
-// document.getElementById('prezzoAcquisto').innerHTML = 'Il prezzo del tuo biglietto è prezzoFinale';
+const risposta = `Il prezzo del biglietto è $(prezzoFinale)`;
 
+document.getElementById('prezzoAcquisto').innerHTML = risposta;
+
+/*
 document.writeln('Il prezzo del tuo biglietto è');
-document.writeln(prezzoFinale);
+document.writeln(prezzoFinale);*/
