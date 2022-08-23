@@ -4,6 +4,7 @@
     background-color: green;
     margin: 200px auto;
     text-align: center;
+    /*text-align-last: center;*/
     font-weight: bold;
     font-size: 30px;
     color: red;

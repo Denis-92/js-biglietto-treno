@@ -8,6 +8,8 @@ const scontoSenior = 0.6;
 let costoBiglietto, prezzoFinale = distanzaDaPercorrere * prezzo;
 
 if (etaPasseggero < 18) {
+    console.log('sconto minori', scontoMinori);
+    console.log('costo biglietto', costoBiglietto);
     prezzoFinale = costoBiglietto * scontoMinori;
 }
 
@@ -20,8 +22,9 @@ else {
 }
 
 //const risposta = `Il prezzo del biglietto è $(prezzoFinale)`;
+console.log('prezzo finale prima del output', prezzoFinale);
 
-document.getElementById('prezzoAcquisto').innerHTML = `Il prezzo del biglietto è $(prezzoFinale) `;
+document.getElementById('prezzoAcquisto').innerHTML = prezzoFinale;
 
 
 //document.writeln('Il prezzo del tuo biglietto è');
