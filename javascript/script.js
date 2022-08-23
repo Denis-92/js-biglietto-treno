@@ -12,33 +12,24 @@ if ((isNaN(distanzaDaPercorrere)) || (isNaN(etaPasseggero))) {
     document.getElementById('prezzoAcquisto').innerHTML = `Dati inseriti non validi`;
 }
 else {
-    if (distanzaDaPercorrere === 0) {
-        console.log('ciao visualizza', scontoMinori);
-        document.getElementById('prezzoAcquisto').innerHTML = `Dati mancanti`;
+    if (etaPasseggero < 18) {
+        console.log('sconto minori', scontoMinori);
+        console.log('costo biglietto', costoBiglietto);
+        prezzoFinale = costoBiglietto * scontoMinori;
     }
 
     else {
 
-
-        if (etaPasseggero < 18) {
-            console.log('sconto minori', scontoMinori);
-            console.log('costo biglietto', costoBiglietto);
-            prezzoFinale = costoBiglietto * scontoMinori;
+        if (etaPasseggero > 65) {
+            prezzoFinale = costoBiglietto * scontoSenior;
         }
 
-        else {
-
-            if (etaPasseggero > 65) {
-                prezzoFinale = costoBiglietto * scontoSenior;
-            }
-
-        }
-
-        prezzoFinale = prezzoFinale.toFixed(2);
-        console.log('prezzo finale prima del output', prezzoFinale);
-
-        document.getElementById('prezzoAcquisto').innerHTML = `Il prezzo del tuo biglietto è ${prezzoFinale} €`;
     }
+
+    prezzoFinale = prezzoFinale.toFixed(2);
+    console.log('prezzo finale prima del output', prezzoFinale);
+
+    document.getElementById('prezzoAcquisto').innerHTML = `Il prezzo del tuo biglietto è ${prezzoFinale} €`;
 }
 
 
