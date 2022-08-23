@@ -34,10 +34,10 @@ else {
 
         }
 
-        const prezzoArrotondato = prezzoFinale.toFixed(2);
-        console.log('prezzo finale prima del output', prezzoArrotondato);
+        prezzoFinale = prezzoFinale.toFixed(2);
+        console.log('prezzo finale prima del output', prezzoFinale);
 
-        document.getElementById('prezzoAcquisto').innerHTML = `Il prezzo del tuo biglietto è ${prezzoArrotondato} €`;
+        document.getElementById('prezzoAcquisto').innerHTML = `Il prezzo del tuo biglietto è ${prezzoFinale} €`;
     }
 }
 
