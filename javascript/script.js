@@ -1,9 +1,9 @@
+console.log('JS - OK!');
+
 let distanzaDaPercorrere = parseInt(prompt('Quanti chilometri da percorrere?'));
 let etaPasseggero = parseInt(prompt('Età del passeggero?'));
 
 const prezzo = 0.21;
-const scontoMinori = 0.8;
-const scontoSenior = 0.6;
 
 let costoBiglietto = distanzaDaPercorrere * prezzo;
 let prezzoFinale = distanzaDaPercorrere * prezzo;
@@ -13,14 +13,16 @@ if ((isNaN(distanzaDaPercorrere)) || (isNaN(etaPasseggero))) {
 }
 else {
     if (etaPasseggero < 18) {
-        console.log('sconto minori', scontoMinori);
-        console.log('costo biglietto', costoBiglietto);
+        const scontoMinori = 0.8;
+        //console.log('sconto minori', scontoMinori);
+        //console.log('costo biglietto', costoBiglietto);
         prezzoFinale = costoBiglietto * scontoMinori;
     }
 
     else {
 
         if (etaPasseggero > 65) {
+            const scontoSenior = 0.6;
             prezzoFinale = costoBiglietto * scontoSenior;
         }
 
@@ -31,8 +33,3 @@ else {
 
     document.getElementById('prezzoAcquisto').innerHTML = `Il prezzo del tuo biglietto è ${prezzoFinale} €`;
 }
-
-
-
-//document.writeln('Il prezzo del tuo biglietto è');
-//document.writeln(prezzoFinale);
