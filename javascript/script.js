@@ -1,7 +1,22 @@
-console.log('JS - OK!');
-
+/* INPUT DA PROMPT - NON LO VOGLIAMO - DA MODIFICARE IN INPUT DA PULSANTE
 let distanzaDaPercorrere = parseInt(prompt('Quanti chilometri da percorrere?'));
 let etaPasseggero = parseInt(prompt('Età del passeggero?'));
+*/
+
+console.log('JS - OK!');
+
+const prezzoAcquistoHTMLElement = document.getElementById('prezzoAcquisto');
+
+// input distanza
+const distanzaDaPercorrereHTMLElement = document.getElementById('distanzaDaPercorrere');
+
+let distanzaDaPercorrere = parseInt(distanzaDaPercorrereHTMLElement.value);
+
+// input eta'
+const etaPasseggeroHTMLElement = document.getElementById('etaPasseggero');
+
+let etaPasseggero = parseInt(etaPasseggeroHTMLElement.value);
+// fine raccolta input --
 
 const prezzo = 0.21;
 
